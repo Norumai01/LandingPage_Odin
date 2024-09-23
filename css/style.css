@@ -150,6 +150,7 @@ button:hover {
 }
 
 /* Quote */
+
 .quote {
     height: auto;
     background-color: #E5E7EB;
@@ -172,6 +173,73 @@ button:hover {
 .quote-name {
     text-align: end;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 1080px) {
+    .quote-container {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 698px) {
+    .quote-container {
+        font-size: 22px;
+    }
+}
+
+/* Gallery Section */
+
+.gallery-section {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    height: auto;
+}
+
+.gallery-section h1 {
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 900;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    padding: 32px 16%;
+    gap: 15px;
+}
+
+.card1 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1020px) {
+    .grid-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+
+    .card1 {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media only screen and (max-width: 642px) {
+    .grid-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-rows: repeat(1, minmax(0, 1fr));
+    }
 }
 
 /* Footer */
